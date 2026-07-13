@@ -411,6 +411,7 @@ University courses and structured learning programs in robot learning and embodi
 - [MIT Underactuated Robotics](https://underactuated.mit.edu/) — Open textbook/course on dynamics, planning, and control for underactuated systems.
 - [Fast.ai Practical Deep Learning](https://course.fast.ai/) — Applied deep-learning curriculum useful for perception and representation foundations.
 - [CS 234 — Reinforcement Learning (Stanford)](https://web.stanford.edu/class/cs234/) — Core RL theory and algorithms with strong academic grounding.
+- [zero2robot](https://www.zero2robot.com/) — Free, from-scratch course: build an embodied-AI robot brain one readable file at a time, from a bare MuJoCo loop to a vision-language-action policy, on a free Colab T4 or CPU laptop.
 
 ## Companies
 
