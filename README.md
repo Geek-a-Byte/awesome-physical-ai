@@ -391,6 +391,7 @@ Middleware, runtime stacks, and reference patterns for shipping robots in produc
 - [MCAP](https://mcap.dev/) — Modern log container format for robotics telemetry, replay, and long-term data retention.
 - [Zenoh](https://zenoh.io/) — Data-centric middleware for distributed robotics over constrained and heterogeneous networks.
 - [rosbag2](https://github.com/ros2/rosbag2) — Standard ROS 2 recording and replay pipeline for debugging and incident analysis.
+- [ABot-AgentOS](https://arxiv.org/abs/2607.10350) — Robotic agent operating layer for scene-conditioned planning, skill execution, verification, multimodal memory, and edge-cloud collaboration.
 
 ## Courses
 
