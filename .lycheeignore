@@ -41,3 +41,7 @@
 ^https?://teach\.cs\.washington\.edu/
 # robotsandstartups.substack.com — covered by substack.com rule above (2026-05)
 # importai.substack.com — covered by substack.com rule above (2026-05)
+# deeplearning.ai — 403 to CI runners; page live in browser (2026-07)
+^https?://(www\.)?deeplearning\.ai/
+# github.com /stargazers pages — GitHub returns 404 to non-browser clients on this path; live in browser (2026-07)
+^https?://github\.com/natnew/awesome-physical-ai/stargazers$
