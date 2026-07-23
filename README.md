@@ -391,6 +391,7 @@ Middleware, runtime stacks, and reference patterns for shipping robots in produc
 - [MCAP](https://mcap.dev/) — Modern log container format for robotics telemetry, replay, and long-term data retention.
 - [Zenoh](https://zenoh.io/) — Data-centric middleware for distributed robotics over constrained and heterogeneous networks.
 - [rosbag2](https://github.com/ros2/rosbag2) — Standard ROS 2 recording and replay pipeline for debugging and incident analysis.
+- [ABot-AgentOS](https://arxiv.org/abs/2607.10350) — Robotic agent operating layer for scene-conditioned planning, skill execution, verification, multimodal memory, and edge-cloud collaboration.
 
 ## Courses
 
@@ -459,7 +460,7 @@ Hands-on learning resources.
 - [LeRobot Tutorials](https://github.com/huggingface/lerobot) - Getting started with robot learning using Hugging Face's framework.
 - [Isaac Lab Documentation](https://isaac-sim.github.io/IsaacLab/) - Comprehensive guides for NVIDIA's robot learning framework.
 - [MuJoCo Documentation](https://mujoco.readthedocs.io/) - Official docs with modeling and programming guides.
-- [ROS 2 Tutorials](https://docs.ros.org/en/rolling/Tutorials.html) - Official tutorials for getting started with ROS 2.
+- [ROS 2 Tutorials](https://docs.ros.org/en/rolling/Tutorials/) - Official tutorials for getting started with ROS 2.
 - [PyBullet Quickstart](https://docs.google.com/document/d/10sXEhzFRSnvFcl3XxNGhnD4N2SedqwdAvK3dsihxVUA/) - Getting started with PyBullet simulation.
 - [Open X-Embodiment Tutorial](https://colab.research.google.com/github/google-deepmind/open_x_embodiment/blob/main/colabs/Open_X_Embodiment_Datasets.ipynb) - Working with the largest robotics dataset.
 - [Diffusion Policy Tutorial](https://diffusion-policy.cs.columbia.edu/) - Implementation guide for diffusion-based robot policies.
@@ -520,7 +521,7 @@ Physical robots for research and development.
 - [DexUMI Code & Data](https://github.com/real-stanford/DexUMI) - Code and datasets for the Dex-UMI dexterous manipulation benchmark.
 
 **Humanoids**
-- [Reachy 2 (Pollen Robotics / Hugging Face)](https://www.pollen-robotics.com/reachy/) - Fully open-source humanoid robot for embodied AI research with Python SDK and ROS 2 support.
+- [Reachy 2 (Pollen Robotics / Hugging Face)](https://www.pollen-robotics.com/reachy-2/) - Fully open-source humanoid robot for embodied AI research with Python SDK and ROS 2 support.
 - [Reachy Mini](https://huggingface.co/blog/reachy-mini) - Compact open-source desktop robot from $299 for AI experimentation.
 - [Boston Dynamics Atlas](https://bostondynamics.com/atlas/) - Advanced research humanoid with dynamic locomotion.
 - [Tesla Optimus](https://www.tesla.com/optimus) - Humanoid designed for manufacturing and consumer applications.
@@ -600,21 +601,21 @@ Researchers, engineers, and practitioners shaping Physical AI.
 **Research Leaders**
 - [Yann LeCun](https://x.com/ylecun) - Chief AI Scientist at Meta. V-JEPA, world models, and self-supervised learning.
 - [Fei-Fei Li](https://x.com/drfeifei) - Stanford HAI, World Labs. Computer vision and spatial intelligence pioneer.
-- [Pieter Abbeel](https://x.com/paboratory) - Berkeley BAIR, Covariant. Robot learning and RL.
+- [Pieter Abbeel](https://x.com/pabbeel) - Berkeley BAIR, Covariant. Robot learning and RL.
 - [Sergey Levine](https://x.com/svlevine) - Berkeley. Reinforcement learning and robot learning.
-- [Chelsea Finn](https://x.com/chelaboratory) - Stanford. Meta-learning and robot learning.
+- [Chelsea Finn](https://x.com/chelseabfinn) - Stanford. Meta-learning and robot learning.
 - [Russ Tedrake](https://x.com/russtedrake) - MIT, Toyota Research Institute. Manipulation and control.
 - [Dieter Fox](https://x.com/dieterfox) - NVIDIA, UW. Perception and robot learning.
 
 **Robotics & Hardware**
-- [Kate Darling](https://x.com/gaboratory) - MIT Media Lab, BD AI Institute. Robotics ethics and human-robot interaction.
+- [Kate Darling](https://x.com/grok_) - MIT Media Lab, BD AI Institute. Robotics ethics and human-robot interaction.
 - [Rodney Brooks](https://x.com/rodneyabrooks) - iRobot co-founder, Robust.AI. Robotics pioneer and blogger.
 - [Angelica Lim](https://x.com/petitegeek) - SFU. Social robotics and emotional AI.
 - [Andra Keay](https://x.com/robohub) - Silicon Valley Robotics. Robot ecosystem and startups.
 
 **Industry Leaders**
 - [Brett Adcock](https://x.com/adcock_brett) - Figure CEO. Humanoid robotics at scale.
-- [Austin Lyons](https://x.com/austinlyons) - Chipstrat. Semiconductor and robotics strategy.
+- [Austin Lyons](https://x.com/austinsemis) - Chipstrat. Semiconductor and robotics strategy.
 - [Soumith Chintala](https://x.com/soumithchintala) - PyTorch co-founder, Meta. Open-source AI.
 - [Andrej Karpathy](https://x.com/karpathy) - Ex-Tesla AI, educator. Neural networks and autonomous systems.
 
