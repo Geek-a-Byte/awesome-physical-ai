@@ -34,20 +34,13 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install docs lint dependencies
+        working-directory: website
+        run: npm ci
+
       - name: Run remark-lint
-        run: |
-          npx --yes \
-            -p remark-cli \
-            -p remark-preset-lint-recommended \
-            -p remark-mdx \
-            remark \
-              --use remark-mdx \
-              --use remark-preset-lint-recommended \
-              --quiet \
-              --frail \
-              README.md \
-              "website/docs/**/*.md" \
-              "website/docs/**/*.mdx"
+        working-directory: website
+        run: npm run lint:docs
 
   yaml-templates:
     name: Validate issue + PR templates
