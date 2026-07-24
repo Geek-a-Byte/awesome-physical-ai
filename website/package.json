@@ -7,7 +7,8 @@
     "start": "docusaurus start --port 3000",
     "build": "docusaurus build",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear"
+    "clear": "docusaurus clear",
+    "lint:docs": "remark --use remark-preset-lint-recommended --quiet ../README.md && remark --use remark-mdx --use remark-preset-lint-recommended --quiet \"docs/**/*.md\" \"docs/**/*.mdx\""
   },
   "dependencies": {
     "@docusaurus/core": "^3.0.0",
@@ -26,5 +27,10 @@
     "follow-redirects": "^1.16.0",
     "postcss": "^8.5.12",
     "uuid": "^14.0.0"
+  },
+  "devDependencies": {
+    "remark-cli": "^12.0.1",
+    "remark-mdx": "^3.1.1",
+    "remark-preset-lint-recommended": "^7.0.1"
   }
 }
