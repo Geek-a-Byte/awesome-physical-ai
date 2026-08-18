@@ -55,6 +55,6 @@ When removing a stale entry, add a one-line comment in the PR description noting
 
 ## Recommended cadence
 
-**Monthly.** A scheduled GitHub Action (`.github/workflows/curation-review.yml`) opens a `Curation review — YYYY-MM` issue on the first of each month at 09:00 UTC, and can also be triggered manually via `workflow_dispatch` from the Actions tab. The workflow is idempotent — re-running it within the same month will not create a duplicate issue.
+**Monthly.** A scheduled GitHub Action (`.github/workflows/curation-review.yml`) opens a `Curation review — YYYY-MM` issue on the first of each month at 09:00 UTC, and can also be triggered manually via `workflow_dispatch` from the Actions tab. The workflow keeps exactly one review open at a time. Re-running it within the same month will not create a duplicate, and if a previous month's review is still open when a new cycle begins, the workflow leaves a dated note on that review rather than opening a second issue — so the open queue always reflects the review actually outstanding.
 
 Any maintainer can open an ad-hoc review issue at any time if a specific problem is noticed — a dead-link surge, a major new entrant in a category, or relevance drift after a significant field development.
