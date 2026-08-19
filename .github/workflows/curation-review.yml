@@ -26,16 +26,58 @@ jobs:
         with:
           script: |
             const monthTag = process.env.MONTH_TAG;
-            const title = `Curation review — ${monthTag}`;
+            const titlePrefix = 'Curation review — ';
+            const title = `${titlePrefix}${monthTag}`;
             const owner = context.repo.owner;
             const repo = context.repo.repo;
 
-            // Idempotency: skip if an open issue with the same title already exists.
-            const q = `repo:${owner}/${repo} is:issue is:open in:title "${title}"`;
-            const existing = await github.rest.search.issuesAndPullRequests({ q, per_page: 5 });
-            const match = existing.data.items.find(i => i.title === title);
-            if (match) {
-              core.info(`Open issue already exists: #${match.number} ${match.html_url}`);
+            // Keep exactly one curation review open at a time.
+            //
+            // A review still open when the next cycle comes round is the review that
+            // needs finishing; opening a second issue over it grows the queue without
+            // adding information. So: skip creation, and leave a dated note on the
+            // open review instead.
+            //
+            // Listed rather than searched: the search index is eventually consistent
+            // and can miss a recently created issue, which would defeat the guard.
+            const openIssues = await github.paginate(github.rest.issues.listForRepo, {
+              owner,
+              repo,
+              state: 'open',
+              labels: 'curation',
+              per_page: 100,
+            });
+            const reviews = openIssues
+              .filter(i => !i.pull_request && i.title.startsWith(titlePrefix))
+              .sort((a, b) => a.number - b.number);
+
+            const currentMonth = reviews.find(i => i.title === title);
+            if (currentMonth) {
+              core.info(`Review for ${monthTag} already open: #${currentMonth.number}`);
+              return;
+            }
+
+            const openReview = reviews[0];
+            if (openReview) {
+              // One note per cycle, so manual workflow_dispatch re-runs stay quiet.
+              const marker = `<!-- curation-review-cycle:${monthTag} -->`;
+              const priorComments = await github.paginate(github.rest.issues.listComments, {
+                owner,
+                repo,
+                issue_number: openReview.number,
+                per_page: 100,
+              });
+              if (priorComments.some(c => (c.body || '').includes(marker))) {
+                core.info(`Cycle ${monthTag} already noted on #${openReview.number}.`);
+                return;
+              }
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: openReview.number,
+                body: `${marker}\nThe ${monthTag} cycle opened while this review is still in progress. No new issue created — this remains the active review.`,
+              });
+              core.info(`Noted cycle ${monthTag} on #${openReview.number}; skipped creation.`);
               return;
             }
 
