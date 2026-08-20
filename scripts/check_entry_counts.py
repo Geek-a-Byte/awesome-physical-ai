@@ -6,14 +6,30 @@ is within the 15–25 entry target band.
 Usage:
     python scripts/check_entry_counts.py
 
+It also verifies that the "Last updated / N entries" status line in
+README.md reports the true total, so the hand-maintained figure cannot
+drift away from the list it describes.
+
 Exit codes:
-    0 — all categories within [15, 25]
-    1 — one or more categories outside the band
+    0 — all categories within [15, 25] and the status-line total is correct
+    1 — a category is outside the band, or the status line is missing/stale
 """
 
 import re
 import sys
 from pathlib import Path
+
+# Matches the centred status line near the top of README.md.
+STATUS_LINE_RE = re.compile(
+    r"<strong>Last updated:</strong>\s*(\d{4}-\d{2}-\d{2})"
+    r".*?<strong>(\d+) entries</strong>"
+)
+
+# The ⚠ glyph is not representable in the cp1252 console Windows uses by
+# default, and printing it there raises UnicodeEncodeError. Force UTF-8 so
+# the script reports a verdict instead of a traceback.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 TARGET_LOW = 15
 TARGET_HIGH = 25
@@ -111,9 +127,26 @@ def main() -> int:
             status = "OK"
         print(f"{category:<{col_w}} {count:>5}  {status}")
 
+    total = sum(counts.values())
+    print(f"{'TOTAL':<{col_w}} {total:>5}")
+
+    status = STATUS_LINE_RE.search(readme.read_text(encoding="utf-8"))
+    print()
+    if status is None:
+        print("FAIL — no 'Last updated / N entries' status line found in README.md.")
+        any_fail = True
+    elif int(status.group(2)) != total:
+        print(
+            f"FAIL — README status line claims {status.group(2)} entries, "
+            f"but the categories hold {total}."
+        )
+        any_fail = True
+    else:
+        print(f"Status line OK — {total} entries, last updated {status.group(1)}.")
+
     print()
     if any_fail:
-        print(f"FAIL — one or more categories outside [{TARGET_LOW}, {TARGET_HIGH}].")
+        print("FAIL — see the errors above.")
         return 1
 
     print(f"PASS — all categories within [{TARGET_LOW}, {TARGET_HIGH}].")

@@ -29,6 +29,10 @@ Built for researchers and practitioners across the stack — from foundations to
   </a>
 </p>
 
+<p align="center">
+  <sub><strong>Last updated:</strong> 2026-08-20 &middot; <strong>225 entries</strong> across 14 canonical categories</sub>
+</p>
+
 <div align="center">
 
 <details>
@@ -292,7 +296,6 @@ Legged, bipedal, and humanoid locomotion — controllers, learning approaches, a
 - [HumanPlus](https://humanoid-ai.github.io/) — Humanoid shadowing of human motion for whole-body control via teleoperation and RL.
 - [OmniH2O](https://omni.human2humanoid.com/) — Universal whole-body teleoperation and learning for humanoids.
 - [RSL-RL](https://github.com/leggedrobotics/rsl_rl) — Fast PPO implementation from ETH Zurich tuned for legged-robot RL on GPU simulators.
-- [legged_gym](https://github.com/leggedrobotics/legged_gym) — Reference Isaac Gym/Isaac Lab environments for legged locomotion research.
 - [DeepMimic](https://xbpeng.github.io/projects/DeepMimic/index.html) — Physics-based character control from motion imitation, foundational for agile RL locomotion.
 - [Walk These Ways](https://gmargo11.github.io/walk-these-ways/) — Learning framework for robust quadruped locomotion over varied terrain and command regimes.
 - [Rapid Locomotion via RL](https://arxiv.org/abs/2207.07802) — Sim-to-real locomotion approach focused on high-speed deployment-ready policies.
