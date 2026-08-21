@@ -30,7 +30,7 @@ Built for researchers and practitioners across the stack — from foundations to
 </p>
 
 <p align="center">
-  <sub><strong>Last updated:</strong> 2026-08-20 &middot; <strong>228 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-08-21 &middot; <strong>229 entries</strong> across 14 canonical categories</sub>
 </p>
 
 <div align="center">
@@ -288,6 +288,7 @@ Methods, models, and tools for grasping, dexterous manipulation, and contact-ric
 - [robosuite](https://robosuite.ai/) — Modular simulation framework for manipulation research with reproducible task environments.
 
 - [DreamZero](https://dreamzero0.github.io/) — Zero-shot dexterous manipulation with diffusion models and vision-language-action policies.
+- [T-Rex](https://tactile-reactive-dexterous.github.io/) — Tactile-reactive vision-language-action model using a variable-rate Mixture-of-Transformers, released with checkpoints and around 50 hours of open tactile manipulation data.
 
 ## Locomotion
 
