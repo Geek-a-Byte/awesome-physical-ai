@@ -30,7 +30,7 @@ Built for researchers and practitioners across the stack — from foundations to
 </p>
 
 <p align="center">
-  <sub><strong>Last updated:</strong> 2026-08-20 &middot; <strong>225 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-08-20 &middot; <strong>228 entries</strong> across 14 canonical categories</sub>
 </p>
 
 <div align="center">
@@ -238,6 +238,10 @@ Generalist policies and vision-language-action (VLA) models for robotic control.
 <!-- tags: paper -->
 - [RoboFlamingo](https://arxiv.org/abs/2311.01378) — Open vision-language-action model for low-cost adaptation to robot manipulation tasks.
 <!-- tags: paper, open-source -->
+- [MEM — Multi-Scale Embodied Memory](https://arxiv.org/abs/2603.03596) — Memory architecture for vision-language-action models pairing a video encoder for short-horizon recall with language-based long-horizon memory.
+<!-- tags: paper -->
+- [R&B-EnCoRe](https://arxiv.org/abs/2602.08167) — Self-supervised method that treats embodied reasoning as a latent variable and distils a refined reasoning dataset without human annotation or external rewards.
+<!-- tags: paper -->
 
 ## World Models
 
@@ -334,6 +338,7 @@ Techniques and case studies for transferring policies trained in simulation to r
 - [Learning Robust Perceptive Locomotion (Miki et al.)](https://leggedrobotics.github.io/rl-perceptiveloco/) — Science Robotics result combining proprioceptive and exteroceptive teachers for robust real-world transfer.
 - [Privileged Learning for Rapid Motor Adaptation](https://arxiv.org/abs/2109.11978) — Distillation strategy leveraging privileged simulation signals for robust real-world control.
 - [SimGAN](https://arxiv.org/abs/1612.07828) — Sim-to-real visual adaptation method for narrowing sensor-domain gaps.
+- [SimToolReal](https://simtoolreal.github.io/) — Object-centric RL policy trained on procedurally generated tool primitives, transferring to unseen real tools without task-specific training.
 
 ## Safety & Robustness
 
