@@ -13,7 +13,7 @@ From an engineering standpoint, locomotion is the category where sim-to-real *wo
 When choosing between approaches, weigh **platform** (quadruped vs. biped vs. humanoid), **simulator and trainer** (Isaac Lab + RSL-RL is the current default), and **perceptive vs. blind** locomotion based on the terrain you actually need. Reference platforms and open codebases matter disproportionately here: most production locomotion stacks are forks of a small number of well-maintained repositories.
 
 :::tip Start here
-**[Learning to Walk in Minutes (ETH/RSL)](https://leggedrobotics.github.io/legged_gym/)** is the canonical entry point: GPU-parallel RL with a working sim-to-real pipeline for quadrupeds. It pairs naturally with [RSL-RL](https://github.com/leggedrobotics/rsl_rl) (the PPO trainer) and [legged_gym](https://github.com/leggedrobotics/legged_gym) (the environments), both listed below.
+**[Learning to Walk in Minutes (ETH/RSL)](https://leggedrobotics.github.io/legged_gym/)** is the canonical entry point: GPU-parallel RL with a working sim-to-real pipeline for quadrupeds. It pairs naturally with [RSL-RL](https://github.com/leggedrobotics/rsl_rl) (the PPO trainer, listed below) and the [legged_gym](https://github.com/leggedrobotics/legged_gym) environments it builds on.
 :::
 
 - [Learning to Walk in Minutes (ETH/RSL)](https://leggedrobotics.github.io/legged_gym/) — Massively-parallel RL pipeline that trains quadruped locomotion policies from scratch in simulation.
@@ -23,7 +23,6 @@ When choosing between approaches, weigh **platform** (quadruped vs. biped vs. hu
 - [HumanPlus](https://humanoid-ai.github.io/) — Humanoid shadowing of human motion for whole-body control via teleoperation and RL.
 - [OmniH2O](https://omni.human2humanoid.com/) — Universal whole-body teleoperation and learning for humanoids.
 - [RSL-RL](https://github.com/leggedrobotics/rsl_rl) — Fast PPO implementation from ETH Zurich tuned for legged-robot RL on GPU simulators.
-- [legged_gym](https://github.com/leggedrobotics/legged_gym) — Reference Isaac Gym/Isaac Lab environments for legged locomotion research.
 - [DeepMimic](https://xbpeng.github.io/projects/DeepMimic/index.html) — Physics-based character control from motion imitation, foundational for agile RL locomotion.
 - [Walk These Ways](https://gmargo11.github.io/walk-these-ways/) — Learning framework for robust quadruped locomotion over varied terrain and command regimes.
 - [Rapid Locomotion via RL](https://arxiv.org/abs/2207.07802) — Sim-to-real locomotion approach focused on high-speed deployment-ready policies.
