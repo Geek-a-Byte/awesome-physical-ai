@@ -30,7 +30,7 @@ Built for researchers and practitioners across the stack — from foundations to
 </p>
 
 <p align="center">
-  <sub><strong>Last updated:</strong> 2026-08-20 &middot; <strong>226 entries</strong> across 14 canonical categories</sub>
+  <sub><strong>Last updated:</strong> 2026-08-20 &middot; <strong>227 entries</strong> across 14 canonical categories</sub>
 </p>
 
 <div align="center">
@@ -239,6 +239,8 @@ Generalist policies and vision-language-action (VLA) models for robotic control.
 - [RoboFlamingo](https://arxiv.org/abs/2311.01378) — Open vision-language-action model for low-cost adaptation to robot manipulation tasks.
 <!-- tags: paper, open-source -->
 - [MEM — Multi-Scale Embodied Memory](https://arxiv.org/abs/2603.03596) — Memory architecture for vision-language-action models pairing a video encoder for short-horizon recall with language-based long-horizon memory.
+<!-- tags: paper -->
+- [R&B-EnCoRe](https://arxiv.org/abs/2602.08167) — Self-supervised method that treats embodied reasoning as a latent variable and distils a refined reasoning dataset without human annotation or external rewards.
 <!-- tags: paper -->
 
 ## World Models
